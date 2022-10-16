@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <n-button type="primary" size="medium">click</n-button>
+  <NConfigProvider inline-theme-disabled>
+    <NuxtLayout>
+      <NuxtPage></NuxtPage>
+    </NuxtLayout>
+  </NConfigProvider>
 
-  </div>
 </template>
 <script setup>
-import { NButton } from 'naive-ui'
+import { NButton, NConfigProvider } from 'naive-ui'
 </script>
