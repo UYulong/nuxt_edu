@@ -4,8 +4,7 @@
       <NuxtPage></NuxtPage>
     </NuxtLayout>
   </NConfigProvider>
-
 </template>
 <script setup>
-import { NButton, NConfigProvider } from 'naive-ui'
+import { NConfigProvider } from 'naive-ui'
 </script>

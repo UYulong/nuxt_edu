@@ -1,19 +1,25 @@
 <template>
-  <div class="container">
-    <!-- 头部导航栏 -->
-    <NavHeader />
+  <n-layout class="container">
+    <n-layout-header>
+      <!-- 头部导航栏 -->
+      <NavHeader />
+    </n-layout-header>
 
     <!-- 中间内容区域 -->
-    <main class="main">
+    <n-layout-content content-style="padding: 0;" class="_main">
       <slot />
-    </main>
+    </n-layout-content>
 
-    <!-- 底部导航栏 -->
-    <NavFooter />
-  </div>
+    <n-layout-footer>
+      <!-- 底部导航栏 -->
+      <NavFooter />
+    </n-layout-footer>
+  </n-layout>
 </template>
 
 <script lang="ts" setup name=''>
+import NavHeader from './NavHeader/index.vue'
+import { NLayout, NLayoutHeader, NLayoutContent, NLayoutFooter } from 'naive-ui'
 </script>
 
 <style lang="scss" scoped>
@@ -23,14 +29,5 @@
   background-color: #F5F7FA;
   display: flex;
   flex-direction: column;
-
-  .main {
-    width: 100%;
-    max-width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 </style>
